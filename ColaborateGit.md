@@ -105,18 +105,23 @@ Luego vuelves a hacer.. git init
 
 ## Ahora sigues todos los pasos para volver a iniciar tu repositorio
 1. (first commit)
+
 git commit -m "first commit"
 
 2.(next) le das un nombre a tu branch principal
+
 git branch -m main 
 
 3.(next) agregas tu repositorio remoto
+
 git add remote origin <aqui va la url de tu repositorio en github
                             
 4.(next) haces el primer push si el repositorio esta vacio
+                            
 git push -u origin main 
                             
 5.(en el caso el repositorio ya tenga archivos y ramas es mejor hacer primero un git pull o git --rebase, para traerte todos los cambios de tu repositorio)
+                            
 git pull -f origin main
                             
 git pull origin main
