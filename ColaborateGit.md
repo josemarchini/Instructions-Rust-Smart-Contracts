@@ -94,7 +94,32 @@ Antes de empezar a trabajar, obtener los últimos cambios del repositorio origin
 Si al crear el branch te equivocaste de nombre y todavia no lo pusheaste al origen, se puede cambiar localmente
 `git branch -m [nuevo-nombre]`
 
+## Borrar carpeta .git para iniciar un nuevo repositorio
+lo primero que tienes que hacer es borrar la carpeta .git de tu directorio de trabajo(esta contiene toda la informacion de git"
+(copy the next comand)
+rm -rf .git 
+rm -rf <carpeta_de_repositorio> .git (en el caso quieras corrar toda tu carpeta NO RECOMENDADO)
 
+Luego vuelves a hacer.. git init
+
+## Ahora sigues todos los pasos para volver a iniciar tu repositorio
+(first commit)
+git commit -m "first commit"
+(next) le das un nombre a tu branch principal
+git branch -m main 
+(next) agregas tu repositorio remoto
+git add remote origin <aqui va la url de tu repositorio en github
+(next) haces el primer push si el repositorio esta vacio
+git push -u origin main 
+(en el caso el repositorio ya tenga archivos y ramas es mejor hacer primero un git pull o git --rebase, para traerte todos los cambios de tu repositorio)
+git pull -f origin main
+git pull origin main
+git pull --rebase                            
+                            
+## Cambiar el nombre a un commit anterior
+git commit --amend -m "an updated commit message"                            
+
+                          
 ## Guardar los cambios locales sin commitear
 Si estas trabajando en algunos cambios y necesitas cambiar de branch por algun otro asunto, y tus cambios todavia no estan listos para ser commiteados, entonces hay una opcion de guardar los cambios locales y volver a agarrarlos despues.
 
