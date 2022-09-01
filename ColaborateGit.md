@@ -97,23 +97,30 @@ Si al crear el branch te equivocaste de nombre y todavia no lo pusheaste al orig
 ## Borrar carpeta .git para iniciar un nuevo repositorio
 lo primero que tienes que hacer es borrar la carpeta .git de tu directorio de trabajo(esta contiene toda la informacion de git"
 (copy the next comand)
-rm -rf .git 
-rm -rf <carpeta_de_repositorio> .git (en el caso quieras corrar toda tu carpeta NO RECOMENDADO)
+
+1. rm -rf .git
+2. rm -rf <carpeta_de_repositorio> .git (en el caso quieras corrar toda tu carpeta NO RECOMENDADO)
 
 Luego vuelves a hacer.. git init
 
 ## Ahora sigues todos los pasos para volver a iniciar tu repositorio
-(first commit)
+1. (first commit)
 git commit -m "first commit"
-(next) le das un nombre a tu branch principal
+
+2.(next) le das un nombre a tu branch principal
 git branch -m main 
-(next) agregas tu repositorio remoto
+
+3.(next) agregas tu repositorio remoto
 git add remote origin <aqui va la url de tu repositorio en github
-(next) haces el primer push si el repositorio esta vacio
+                            
+4.(next) haces el primer push si el repositorio esta vacio
 git push -u origin main 
-(en el caso el repositorio ya tenga archivos y ramas es mejor hacer primero un git pull o git --rebase, para traerte todos los cambios de tu repositorio)
+                            
+5.(en el caso el repositorio ya tenga archivos y ramas es mejor hacer primero un git pull o git --rebase, para traerte todos los cambios de tu repositorio)
 git pull -f origin main
+                            
 git pull origin main
+                            
 git pull --rebase                            
                             
 ## Cambiar el nombre a un commit anterior
